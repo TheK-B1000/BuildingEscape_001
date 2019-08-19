@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28315.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Engine", "Engine", "{4A95645A-3817-4497-A81D-1BFA0245354B}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Engine", "Engine", "{F9F9230F-4851-4871-A83A-BE10FFA8CE70}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Enterprise", "Enterprise", "{97843438-8FF3-4F13-9976-284B77241C5A}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Enterprise", "Enterprise", "{F37BE67F-AA83-4049-911A-10F9C60CF5AA}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Games", "Games", "{8C5E7C34-1009-4F12-9CD3-63D0689DC24C}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Games", "Games", "{735FFD3D-2B7A-4B3E-BC01-BF2D348B49BD}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UE4", "Intermediate\ProjectFiles\UE4.vcxproj", "{FBD63D08-A184-4E48-9CC7-4DFA346DF276}"
 EndProject
@@ -15,7 +15,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Studio", "Intermediate\Proj
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BuildingEscape_001", "Intermediate\ProjectFiles\BuildingEscape_001.vcxproj", "{EC13C9F1-299F-42F4-B169-A4D4229B8C7D}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Visualizers", "Visualizers", "{D89BCBB0-A9CA-4397-B0FF-7A0C1A5934AC}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Visualizers", "Visualizers", "{AB465871-9782-4479-A632-62BF0A4AAF1F}"
 	ProjectSection(SolutionItems) = preProject
 		..\..\..\..\..\..\..\..\Program Files\Epic Games\UE_4.22\Engine\Extras\VisualStudioDebugging\UE4.natvis = ..\..\..\..\..\..\..\..\Program Files\Epic Games\UE_4.22\Engine\Extras\VisualStudioDebugging\UE4.natvis
 	EndProjectSection
@@ -123,8 +123,8 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{FBD63D08-A184-4E48-9CC7-4DFA346DF276} = {4A95645A-3817-4497-A81D-1BFA0245354B}
-		{C32924E5-5AFE-4029-9CC6-F37240E4FE68} = {97843438-8FF3-4F13-9976-284B77241C5A}
-		{EC13C9F1-299F-42F4-B169-A4D4229B8C7D} = {8C5E7C34-1009-4F12-9CD3-63D0689DC24C}
+		{FBD63D08-A184-4E48-9CC7-4DFA346DF276} = {F9F9230F-4851-4871-A83A-BE10FFA8CE70}
+		{C32924E5-5AFE-4029-9CC6-F37240E4FE68} = {F37BE67F-AA83-4049-911A-10F9C60CF5AA}
+		{EC13C9F1-299F-42F4-B169-A4D4229B8C7D} = {735FFD3D-2B7A-4B3E-BC01-BF2D348B49BD}
 	EndGlobalSection
 EndGlobal
