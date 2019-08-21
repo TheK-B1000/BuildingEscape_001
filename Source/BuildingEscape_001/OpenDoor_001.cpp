@@ -4,6 +4,7 @@
 #include "OpenDoor_001.h"
 #include "Math/Rotator.h"
 #include "Engine/World.h"
+#include "GameFramework/PlayerController.h"
 
 // Sets default values for this component's properties
 UOpenDoor_001::UOpenDoor_001()
@@ -20,23 +21,30 @@ UOpenDoor_001::UOpenDoor_001()
 void UOpenDoor_001::BeginPlay()
 {
 	Super::BeginPlay();
-
-	// Set Actor
-	AActor* Owner = GetOwner();
-
-	// Make Rotator
-	FRotator NewRotator = FRotator(0.0f, 90.0f, 0.0f);
-
-	// Set Rotation
-	Owner->SetActorRotation(NewRotator);
+	Owner = GetOwner();
+	OpenDoor();
 }
 
+void UOpenDoor_001::OpenDoor()
+{
+
+	Owner->SetActorRotation(FRotator(0.0f, OpenAngle, 0.0f));
+}
+
+void UOpenDoor_001::CloseDoor()
+{
+	Owner->SetActorRotation(FRotator(0.0f, 0.0f, 0.0f));
+}
 
 // Called every frame
 void UOpenDoor_001::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
-	
+	// Poll Trigger Volume
+	if (PressurePlate && PressurePlate->IsOverlappingActor)
+	{
+		CloseDoor();
+	}
 }
 
