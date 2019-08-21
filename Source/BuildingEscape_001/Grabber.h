@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "DrawDebugHelpers.h"
 #include "Components/ActorComponent.h"
 #include "Grabber.generated.h"
 
@@ -24,5 +25,6 @@ public:
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
-		
+	// How far we can reach in cm
+	float Reach = 100.0f;
 };
