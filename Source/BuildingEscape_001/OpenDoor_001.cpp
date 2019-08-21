@@ -46,11 +46,10 @@ void UOpenDoor_001::TickComponent(float DeltaTime, ELevelTick TickType, FActorCo
 	{
 		OpenDoor();
 		LastDoorOpenTime = GetWorld()->GetTimeSeconds();
-
-		if (GetWorld()->GetTimeSeconds() - LastDoorOpenTime > DoorCloseDelay)
-		{
+	}
+	if (GetWorld()->GetTimeSeconds() - LastDoorOpenTime > DoorCloseDelay)
+	{
 			CloseDoor();
-		}
 	}
 
 }
