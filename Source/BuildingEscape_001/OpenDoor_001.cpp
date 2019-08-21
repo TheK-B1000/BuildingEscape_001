@@ -42,9 +42,14 @@ void UOpenDoor_001::TickComponent(float DeltaTime, ELevelTick TickType, FActorCo
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
 	// Poll Trigger Volume
-	if (PressurePlate && PressurePlate->IsOverlappingActor)
+	if (PressurePlate && PressurePlate->IsOverlappingActor(ActorThatOpens))
 	{
-		CloseDoor();
-	}
+		OpenDoor();
+		LastDoorOpenTime = GetWorld()->GetTimeSeconds();
+
+		if (GetWorld()->GetTimeSeconds() - LastDoorOpenTime > DoorCloseDelay)
+		{
+			CloseDoor();
+		}
 }
 
