@@ -2,6 +2,8 @@
 
 
 #include "OpenDoor_001.h"
+#include "Math/Rotator.h"
+#include "Engine/World.h"
 
 // Sets default values for this component's properties
 UOpenDoor_001::UOpenDoor_001()
@@ -19,8 +21,14 @@ void UOpenDoor_001::BeginPlay()
 {
 	Super::BeginPlay();
 
-	// ...
-	
+	// Set Actor
+	AActor* Owner = GetOwner();
+
+	// Make Rotator
+	FRotator NewRotator = FRotator(0.0f, 90.0f, 0.0f);
+
+	// Set Rotation
+	Owner->SetActorRotation(NewRotator);
 }
 
 
