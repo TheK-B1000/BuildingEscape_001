@@ -37,4 +37,6 @@ private:
 	UInputComponent* InputComponent;
 
 	void Grab();
+
+	void Release();
 };
