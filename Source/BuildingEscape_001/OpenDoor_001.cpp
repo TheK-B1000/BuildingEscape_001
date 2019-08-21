@@ -51,5 +51,7 @@ void UOpenDoor_001::TickComponent(float DeltaTime, ELevelTick TickType, FActorCo
 		{
 			CloseDoor();
 		}
+	}
+
 }
 
