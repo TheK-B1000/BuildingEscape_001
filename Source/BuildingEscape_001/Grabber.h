@@ -34,7 +34,7 @@ private:
 
 	UPhysicsHandleComponent* PhysicsHandle = nullptr;
 
-	UInputComponent* InputComponent;
+	UInputComponent* InputComponent = nullptr;
 
 	void Grab();
 
@@ -49,5 +49,5 @@ private:
 	// Return hit for first physics body in reach
 	FHitResult GetFirstPhysicsBodyInReach() const;
 
-	FTwoVectors GetLineTracePoints() const
+	FTwoVectors GetLineTracePoints() const;
 };

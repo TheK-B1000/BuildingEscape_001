@@ -43,8 +43,6 @@ void UGrabber::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompone
 
 void UGrabber::Grab()
 {
-	UE_LOG(LogTemp, Warning, TEXT("Grab Pressed!"));
-
 	// line trace and see if we hit any actors
 	auto HitResult = GetFirstPhysicsBodyInReach();
 	auto ComponentToGrab = HitResult.GetComponent(); // gets the mesh in our case
@@ -53,19 +51,19 @@ void UGrabber::Grab()
 	// if we hit somehtign attach a physics handle
 	if (ActorHit != nullptr)
 	{
-		PhysicsHandle->GrabComponent
+		if (!PhysicsHandle) { return; }
+		PhysicsHandle->GrabComponentAtLocation
 		(
 			ComponentToGrab,
 			NAME_None, // No bones needed
-			GetOwner()->GetActorLocation(),
-			true // allow rotation
+			GetOwner()->GetActorLocation()
 		);
 	}
 }
 
 void UGrabber::Release()
 {
-	UE_LOG(LogTemp, Warning, TEXT("Grab Released!"));
+	if (!PhysicsHandle) { return; }
 	PhysicsHandle->ReleaseComponent();
 }
 
