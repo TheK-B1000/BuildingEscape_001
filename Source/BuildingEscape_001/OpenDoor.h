@@ -43,6 +43,8 @@ private:
 
 	AActor* Owner = nullptr;
 
+	UPrimitiveComponent* PrimitiveComponent = nullptr;
+
 
 	// returns total mass in kilograms
 	float GetTotalMassOfActorsOnPlate();
